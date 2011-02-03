@@ -5,6 +5,12 @@ SampleApp::Application.routes.draw do
   
   get "pages/about"
   
+  match '/about', :to =>'pages#about'
+  match '/contact', :to => 'pages#contact'
+  match '/help', :to => 'pages#help'
+  match '/signin', :to => 'pages#signin'
+  root :to => 'pages#home'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -6,6 +6,7 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'gravatar_image_tag'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,6 +30,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #  gem 'webrat'
 # end
+
 
 group :development do
   gem 'rspec-rails'

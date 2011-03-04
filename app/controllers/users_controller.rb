@@ -8,9 +8,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @title = @user.name
   end
+  
   def create
     @user = User.new(params[:user])
     if @user.save
+        sign_in @user
         flash[:success] = "Welcome to my spanking new rails app!"
         redirect_to @user
     else
@@ -18,4 +20,8 @@ class UsersController < ApplicationController
         render 'new'
     end
   end
+  
+
+
 end
+

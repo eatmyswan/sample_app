@@ -8,6 +8,7 @@ SampleApp::Application.routes.draw do
   get "pages/about"
   
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :microposts, :only => [:create, :destroy]
   
   match '/about', :to =>'pages#about'
   match '/contact', :to => 'pages#contact'
